@@ -1,0 +1,12 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.prose ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.prose li {
+    margin-bottom: 0.5rem;
+}

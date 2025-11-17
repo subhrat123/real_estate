@@ -1,0 +1,35 @@
+# Environment Variables
+# --- THIS IS THE MOST IMPORTANT ---
+# Prevents your API keys from being leaked.
+.env
+
+# Python Virtual Environment
+venv/
+.venv/
+env/
+venv.bak/
+env.bak/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+# Default database
+db.sqlite3
+db.sqlite3-journal
+*.log
+local_settings.py
+
+# IDE / Editor config
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Static & Media
+# These are collected by 'collectstatic' and should be
+# generated on the server, not stored in git.
+/static/
+/media/
