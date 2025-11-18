@@ -4,6 +4,7 @@ import BotResponse from './components/BotResponse';
 import './App.css';
 
 function App() {
+  const API_URL = import.meta.env.VITE_API_URL || 'https://real-estate-jazy.onrender.com';
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -17,7 +18,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/chat/', { query: inputValue });
+      const response = await axios.post(`${API_URL}/api/chat/`, { query: inputValue });
       const botMessage = { type: 'bot', data: response.data };
       setMessages(prev => [...prev, botMessage]);
     } catch (error) {
