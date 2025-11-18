@@ -19,6 +19,6 @@ from django.urls import path
 from .views import handle_chat
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path("chat/", handle_chat),
 ]

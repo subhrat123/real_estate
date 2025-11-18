@@ -1,3 +1,6 @@
+# This handles the API requests for analyzing and comparing real estate areas. It uses Google Gemini model for AI processing,( location extraction, and delegates analysis/comparison tasks.)
+# we can also scale this app for agentic ai use-cases in future.
+
 import re
 import json
 from rest_framework.decorators import api_view

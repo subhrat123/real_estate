@@ -1,3 +1,4 @@
+# This file handles the core logic for analyzing and comparing real estate areas. It defines functions that process data and interact with the AI model to generate insights.
 from rest_framework.response import Response
 from .prompts import ANALYSIS_PROMPT, COMPARISON_PROMPT
 import logging
@@ -10,9 +11,6 @@ def handle_analysis(location_name, df, model):
 
         if matched_df.empty:
             return Response({"error": f"No data found for location: {location_name}"}, status=404)
-
-        # Fill NaN values with 0 before serializing
-        matched_df = matched_df.fillna(0)
 
         chart_data = {
             "years": matched_df["year"].tolist(),
@@ -60,7 +58,6 @@ def handle_comparison(locations, df, model):
             if matched_df.empty:
                 continue
 
-            # Fill NaN values with 0 before serializing
             matched_df = matched_df.fillna(0)
 
             chart_data.append({

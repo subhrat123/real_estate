@@ -1,3 +1,5 @@
+
+# This is the data preprocessing for handling the missing values in the real estate dataset.
 import pandas as pd
 import os
 import logging

@@ -1,3 +1,4 @@
+# This file contains prompt templates for the AI model used in the real estate analysis application.
 LOCATION_EXTRACTION_PROMPT = """
 You are a location extraction agent. Your job is to extract the names of locations from a user's query.
 The user will provide a query about real estate, and you need to identify the locations mentioned.
