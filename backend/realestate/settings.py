@@ -62,8 +62,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CORS Settings
-CORS_ALLOW_ALL_ORIGINS = True
+# # CORS Settings
+# CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'realestate.urls'
 
